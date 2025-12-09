@@ -1,10 +1,13 @@
 function mediasomma() {
 let output="";
 let q=document.getElementById("numeri").value;
+let som;
+let med;
 let num=[];
 
 for (let i=0;i<q;i++) {
     num[i]=prompt("Inserire il "+(i+1)+"o numero");
+    num[i]=parseInt(num[i]);
     if(isNaN(num[i])){
         output="Errore, un numero inserito non è un numero, reinserire"
     }
@@ -12,11 +15,13 @@ for (let i=0;i<q;i++) {
     }
 }
 
-let somma=somma(num);
+som=somma(num);
 
-let media=media(somma,num);
+med=media(som,num);
 
-document.getElementById("output").innerHTML = "La somma dei numeri inseriti è: "+somma+"<br>"+"La media dei nuemri inseirti è: "+media;
+output= "La somma dei numeri inseriti è: "+som+"<br>"+"La media dei nuemri inseirti è: "+med;
+
+document.getElementById("output").innerHTML = output;
 
 }
 
@@ -30,10 +35,11 @@ let somm=0;
     return somm;
 }
 
-function media(somma,num) {
+function media(som,num) {
 let c=num.length;
+let media;
 
-    let media=somma/c;
+    media=som/c;
 
     return media;
 }
