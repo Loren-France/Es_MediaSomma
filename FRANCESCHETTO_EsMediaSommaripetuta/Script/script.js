@@ -23,7 +23,7 @@ document.getElementById("output").innerHTML = "La somma dei numeri inseriti è: 
 function somma(num) {
 let somm=0;
 
-    for (let i=0;i<num.lenght;i++) {
+    for (let i=0;i<num.length;i++) {
         somm=somm+num[i];
     }
 
@@ -31,8 +31,9 @@ let somm=0;
 }
 
 function media(somma,num) {
+let c=num.length;
 
-    let media=somma/num.lenght;
+    let media=somma/c;
 
     return media;
 }
