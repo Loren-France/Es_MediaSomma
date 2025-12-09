@@ -5,6 +5,11 @@ let num=[];
 
 for (let i=0;i<q;i++) {
     num[i]=prompt("Inserire il "+(i+1)+"o numero");
+    if(isNaN(num[i])){
+        output="Errore, un numero inserito non è un numero, reinserire"
+    }
+    else{
+    }
 }
 
 let somma=somma(num);
